@@ -130,18 +130,18 @@ let menuData = [
   {
     id: 14,
     name: "Icecream Cake",
-    desc: "Loaded mini pizzas with cheese pull guaranteed.",
+    desc: "Blend of creamy ice cream and soft cake.",
     price: 120,
-    category: "savory",
+    category: "cakes",
     // ADD YOUR IMAGE HERE
     image: "images/icecream.jpg"
   },
   {
     id: 15,
     name: "Blueberry Cake",
-    desc: "Loaded mini pizzas with cheese pull guaranteed.",
+    desc: "Burst of fruity sweetness in every bite.",
     price: 120,
-    category: "savory",
+    category: "cakes",
     // ADD YOUR IMAGE HERE
     image: "images/blueberry.jpg"
   }
