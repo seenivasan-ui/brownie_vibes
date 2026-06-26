@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brownie Vibes – Homemade Brownies, Cakes & Café | Trichy</title>
+<meta name="description" content="Brownie Vibes – Trichy's most loved homemade brownies, customized birthday cakes, donuts, pizza & venue setups. FSSAI registered. Order on WhatsApp. Fridays Road, Thiruvanaikoil, Trichy.">
+<meta name="keywords" content="brownie vibes trichy, homemade brownies trichy, birthday cakes trichy, customized cakes thiruvanaikoil, brownie cafe trichy, venue setup trichy, chocolate cake trichy">
+<meta property="og:title" content="Brownie Vibes – Homemade Brownies & Cakes | Trichy">
+<meta property="og:description" content="Feeling Downie? Eat Brownie! Homemade brownies from ₹10. Custom cakes, venue setups, donuts & more. Trichy's sweetest spot.">
+<meta property="og:type" content="website">
+<meta name="geo.region" content="IN-TN">
+<meta name="geo.placename" content="Trichy">
+
+<!-- Schema Markup for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Brownie Vibes Cafe",
+  "description": "Homemade brownies, customized cakes, donuts, pizza and venue setups in Trichy",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Fridays Road, Thiruvanaikoil",
+    "addressLocality": "Trichy",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "telephone": "+919842916379",
+  "servesCuisine": ["Desserts", "Bakery", "Cafe"],
+  "priceRange": "₹10 - ₹2000",
+  "openingHours": "Mo-Su 09:00-21:00",
+  "sameAs": ["https://www.instagram.com/_brownie_vibes_"]
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Added to cart!</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">Brownie <span>Vibes</span></a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#location">Find Us</a></li>
+    <li><a href="#contact">Order</a></li>
+  </ul>
+  <button class="nav-cart" onclick="toggleCart()">
+    🛒 <span>Cart</span>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+  <button class="hamburger" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-circle"></div>
+  <div class="hero-bg-circle"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">FSSAI Registered · Delivery All Over India</div>
+    <div class="fssai-badge">✓ Food Safety Certified</div>
+    <h1>
+      Feeling Downie?
+      <em>Eat Brownie.</em>
+    </h1>
+    <p class="hero-tagline">Trichy's most loved homemade brownies, custom cakes & café delights</p>
+    <p class="hero-sub">📍 Fridays Road, Thiruvanaikoil, Trichy</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary"><span>🍫 Explore Menu</span></a>
+      <a href="https://wa.me/919842916379" target="_blank" class="btn-outline">💬 Order on WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">₹10</div>
+        <div class="stat-label">Starts At</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">166+</div>
+        <div class="stat-label">Happy Posts</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Homemade Love</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-logo-big">
+      <!--
+        ADD YOUR LOGO HERE:
+        Replace the placeholder below with your logo image.
+        Place your logo file in the images/ folder.
+        Example: <img src="images/logo.png" alt="Brownie Vibes Logo">
+      -->
+      <div style="text-align:center;">
+        <div style="font-size:6rem;">🍫</div>
+        <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--brown-mid);margin-top:0.5rem;">Brownie Vibes</div>
+      </div>
+    </div>
+    <div class="hero-float-badge badge-1">
+      <span class="badge-icon">🎂</span>
+      <div><strong>Custom Cakes</strong><br><small style="color:var(--text-mid);font-weight:400;">Made to order</small></div>
+    </div>
+    <div class="hero-float-badge badge-2">
+      <span class="badge-icon">🎪</span>
+      <div><strong>Venue Setup</strong><br><small style="color:var(--text-mid);font-weight:400;">Birthdays & events</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <span class="marquee-item">Homemade Brownies</span>
+    <span class="marquee-item">Custom Birthday Cakes</span>
+    <span class="marquee-item">Chocolate Fountain</span>
+    <span class="marquee-item">Venue Decoration</span>
+    <span class="marquee-item">Donuts & Cookies</span>
+    <span class="marquee-item">Mini Burgers</span>
+    <span class="marquee-item">Pizza</span>
+    <span class="marquee-item">FSSAI Registered</span>
+    <span class="marquee-item">Delivery All Over India</span>
+    <span class="marquee-item">Trichy's Sweetest Spot</span>
+    <!-- duplicate for infinite scroll -->
+    <span class="marquee-item">Homemade Brownies</span>
+    <span class="marquee-item">Custom Birthday Cakes</span>
+    <span class="marquee-item">Chocolate Fountain</span>
+    <span class="marquee-item">Venue Decoration</span>
+    <span class="marquee-item">Donuts & Cookies</span>
+    <span class="marquee-item">Mini Burgers</span>
+    <span class="marquee-item">Pizza</span>
+    <span class="marquee-item">FSSAI Registered</span>
+    <span class="marquee-item">Delivery All Over India</span>
+    <span class="marquee-item">Trichy's Sweetest Spot</span>
+  </div>
+</div>
+
+<!-- MENU SECTION -->
+<section class="menu-section" id="menu">
+  <div class="section-label">Our Menu</div>
+  <h2 class="section-title">Made with <em>love</em> & chocolate</h2>
+  <p class="section-sub">Every bite crafted fresh in our home kitchen. Real ingredients, real flavour, real love.</p>
+
+  <div class="menu-tabs">
+    <button class="menu-tab active" onclick="filterMenu('all', this)">All Items</button>
+    <button class="menu-tab" onclick="filterMenu('brownies', this)">Brownies</button>
+    <button class="menu-tab" onclick="filterMenu('cakes', this)">Cakes</button>
+    <button class="menu-tab" onclick="filterMenu('cookies', this)">Cookies & Donuts</button>
+    <button class="menu-tab" onclick="filterMenu('savory', this)">Savory</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- QUOTES SECTION -->
+<section class="quotes-section">
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Life is short. Eat the brownie first.</p>
+      <span class="quote-author">— Brownie Vibes Mantra</span>
+    </div>
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">A cake is just a reason to gather the people you love in one place.</p>
+      <span class="quote-author">— Every Birthday Ever</span>
+    </div>
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Chocolate doesn't ask silly questions. Chocolate understands.</p>
+      <span class="quote-author">— A Very Wise Person</span>
+    </div>
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Stressed spelled backwards is desserts. Coincidence? We think not.</p>
+      <span class="quote-author">— Sweet Wisdom</span>
+    </div>
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">The secret ingredient is always love. And chocolate. Mostly chocolate.</p>
+      <span class="quote-author">— Monisha, Brownie Vibes</span>
+    </div>
+    <div class="quote-card">
+      <span class="quote-mark">"</span>
+      <p class="quote-text">Home is where the brownie is warm and the memories are sweeter.</p>
+      <span class="quote-author">— Brownie Vibes</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">More than just <em>brownies</em></h2>
+  <p class="section-sub">From your morning craving to your biggest birthday bash — we've got every sweet moment covered.</p>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <span class="service-icon">🍫</span>
+      <div class="service-title">Homemade Brownies</div>
+      <div class="service-desc">Rich, fudgy, oven-fresh brownies starting at just ₹10. The OG Brownie Vibes experience.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎂</span>
+      <div class="service-title">Custom Birthday Cakes</div>
+      <div class="service-desc">Fully personalized cakes for every theme, age, and occasion. You dream it, we bake it.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎪</span>
+      <div class="service-title">Venue Setup & Decoration</div>
+      <div class="service-desc">Complete birthday & event setups with balloon décor, lights, photo zones and more.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🍩</span>
+      <div class="service-title">Donuts & Cookies</div>
+      <div class="service-desc">Glazed donuts, choco-chip cookies, and signature treats baked fresh daily.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🍕</span>
+      <div class="service-title">Pizza & Mini Burgers</div>
+      <div class="service-desc">Because every good celebration needs savoury too! Mini burgers and loaded pizzas.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🍫</span>
+      <div class="service-title">Chocolate Fountain</div>
+      <div class="service-desc">The showstopper of every event — a gorgeous flowing chocolate fountain for dipping.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚚</span>
+      <div class="service-title">Pan-India Delivery</div>
+      <div class="service-desc">Craving brownies from another city? We deliver all over India — packed with love.</div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">📸</span>
+      <div class="service-title">Content Creation</div>
+      <div class="service-desc">Follow us on Instagram @_brownie_vibes_ for drool-worthy reels and cake reveals!</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION SECTION -->
+<section class="location-section" id="location">
+  <div class="location-info reveal">
+    <div class="section-label">Find Us</div>
+    <h2 class="location-title">Come visit us<br>in Trichy 📍</h2>
+    <div class="location-detail">
+      <span class="location-icon">📍</span>
+      <div>
+        <div class="location-detail-label">Address</div>
+        <div class="location-detail-value">Brownie Vibes Cafe<br>Fridays Road, Thiruvanaikoil<br>Trichy, Tamil Nadu</div>
+      </div>
+    </div>
+    <div class="location-detail">
+      <span class="location-icon">📞</span>
+      <div>
+        <div class="location-detail-label">Call / WhatsApp</div>
+        <div class="location-detail-value">
+          <a href="tel:+919842916379" style="color:var(--gold);text-decoration:none;">98429 16379</a><br>
+          <a href="tel:+919080332277" style="color:var(--gold);text-decoration:none;">90803 32277</a>
+        </div>
+      </div>
+    </div>
+    <div class="location-detail">
+      <span class="location-icon">⏰</span>
+      <div>
+        <div class="location-detail-label">Hours</div>
+        <div class="location-detail-value">Open Daily · 9 AM – 9 PM</div>
+      </div>
+    </div>
+    <div class="location-detail">
+      <span class="location-icon">📸</span>
+      <div>
+        <div class="location-detail-label">Instagram</div>
+        <div class="location-detail-value">
+          <a href="https://instagram.com/_brownie_vibes_" target="_blank" style="color:var(--gold);text-decoration:none;">@_brownie_vibes_</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="location-map reveal">
+    <div class="map-placeholder">
+      <span class="map-pin">📍</span>
+      <p style="color:rgba(255,255,255,0.6);font-size:1rem;">Fridays Road, Thiruvanaikoil<br>Trichy, Tamil Nadu</p>
+      <a href="https://maps.google.com/?q=Brownie+Vibes+Cafe+Thiruvanaikoil+Trichy" target="_blank" class="map-link">Open in Google Maps 🗺️</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / ORDER SECTION -->
+<section class="contact-section" id="contact">
+  <div class="section-label">Order Now</div>
+  <h2 class="section-title">Ready to <em>indulge?</em></h2>
+  <p class="section-sub">Place your order through WhatsApp or Instagram — Monisha personally handles every single order.</p>
+  <div class="contact-grid reveal">
+    <div class="contact-actions">
+      <a href="https://wa.me/919842916379?text=Hi%20Brownie%20Vibes!%20I'd%20like%20to%20place%20an%20order%20%F0%9F%AB%90" target="_blank" class="contact-btn contact-btn-wa">
+        <span class="contact-btn-icon">💬</span>
+        <div>
+          <span class="contact-btn-text-small">Chat & Order on</span>
+          WhatsApp — 98429 16379
+        </div>
+      </a>
+      <a href="https://instagram.com/_brownie_vibes_" target="_blank" class="contact-btn contact-btn-ig">
+        <span class="contact-btn-icon">📸</span>
+        <div>
+          <span class="contact-btn-text-small">DM us on</span>
+          Instagram — @_brownie_vibes_
+        </div>
+      </a>
+      <a href="tel:+919842916379" class="contact-btn contact-btn-ph">
+        <span class="contact-btn-icon">📞</span>
+        <div>
+          <span class="contact-btn-text-small">Call us directly</span>
+          98429 16379 / 90803 32277
+        </div>
+      </a>
+    </div>
+
+    <div class="order-form-card">
+      <div class="order-form-title">Quick Enquiry</div>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="enquiryName" placeholder="e.g. Priya">
+      </div>
+      <div class="form-group">
+        <label>What are you looking for?</label>
+        <select id="enquiryType">
+          <option value="">Select category</option>
+          <option>Brownies</option>
+          <option>Birthday Cake</option>
+          <option>Venue Setup</option>
+          <option>Donuts & Cookies</option>
+          <option>Pizza / Mini Burgers</option>
+          <option>Chocolate Fountain</option>
+          <option>Custom Order</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Details</label>
+        <textarea id="enquiryMsg" placeholder="Tell us your date, theme, quantity..."></textarea>
+      </div>
+      <button class="btn-primary" onclick="sendWhatsAppEnquiry()" style="width:100%;justify-content:center;border-radius:12px;">
+        <span>Send via WhatsApp 💬</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="brand-name">Brownie <span>Vibes</span></span>
+      <p class="footer-desc">Trichy's home for handcrafted brownies, custom cakes, and unforgettable celebrations. FSSAI registered. Made with love by Monisha.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/_brownie_vibes_" target="_blank" class="social-btn">📸</a>
+        <a href="https://wa.me/919842916379" target="_blank" class="social-btn">💬</a>
+        <a href="tel:+919842916379" class="social-btn">📞</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#menu">Brownies</a></li>
+        <li><a href="#menu">Birthday Cakes</a></li>
+        <li><a href="#menu">Cookies & Donuts</a></li>
+        <li><a href="#menu">Pizza & Burgers</a></li>
+        <li><a href="#services">Venue Setup</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#location">Find Us</a></li>
+        <li><a href="#contact">Order Now</a></li>
+        <li><a href="https://instagram.com/_brownie_vibes_" target="_blank">Instagram</a></li>
+        <li><a href="javascript:void(0)" onclick="openOwnerLogin()">Owner Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Brownie Vibes, Trichy · Made with 🍫 &amp; ❤️</span>
+    <span>FSSAI Registered · <a href="javascript:void(0)" onclick="openOwnerLogin()">Owner Access</a></span>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h2>Your Cart 🛒</h2>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span>🍫</span>
+      <p>Your cart is empty.<br>Add something delicious!</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-price" id="cartTotal">₹0</span>
+    </div>
+    <button class="whatsapp-order-btn" onclick="orderViaWhatsApp()">
+      💬 Order via WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- OWNER LOGIN MODAL -->
+<div class="modal-overlay" id="ownerLoginModal">
+  <div class="modal-box">
+    <button class="modal-close-btn" onclick="closeOwnerLogin()">✕</button>
+    <div class="modal-title">Owner Login</div>
+    <p class="modal-sub">Access the dashboard to manage your menu & prices.</p>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" id="ownerUser" placeholder="Enter username" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="ownerPass" placeholder="Enter password" onkeydown="if(event.key==='Enter')ownerLogin()">
+    </div>
+    <div class="login-error" id="loginError">❌ Incorrect credentials. Try again.</div>
+    <button class="btn-primary" onclick="ownerLogin()" style="width:100%;justify-content:center;border-radius:12px;margin-top:0.5rem;">
+      <span>Login to Dashboard</span>
+    </button>
+    <p style="font-size:0.78rem;color:var(--text-mid);margin-top:1.5rem;text-align:center;">Default: admin / brownievibes2025</p>
+  </div>
+</div>
+
+<!-- OWNER DASHBOARD -->
+<div class="owner-dashboard" id="ownerDashboard">
+  <nav class="owner-nav">
+    <div class="owner-nav-title">Brownie <span>Vibes</span> · Owner Dashboard</div>
+    <div class="owner-nav-right">
+      <span style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Welcome, Monisha 👋</span>
+      <button class="owner-logout-btn" onclick="ownerLogout()">Logout</button>
+    </div>
+  </nav>
+  <div class="owner-content">
+
+    <!-- ADD NEW ITEM -->
+    <div class="add-item-card">
+      <div class="add-item-title">➕ Add New Menu Item</div>
+      <div class="add-item-grid">
+        <input class="owner-input" id="newItemName" placeholder="Item name (e.g. Red Velvet Brownie)">
+        <input class="owner-input" id="newItemPrice" placeholder="Price in ₹ (e.g. 80)" type="number">
+        <input class="owner-input owner-input-full" id="newItemDesc" placeholder="Short description (e.g. Rich red velvet with cream cheese frosting)">
+        <select class="owner-input" id="newItemCategory">
+          <option value="brownies">Brownies</option>
+          <option value="cakes">Cakes</option>
+          <option value="cookies">Cookies & Donuts</option>
+          <option value="savory">Savory</option>
+        </select>
+        <input class="owner-input" id="newItemEmoji" placeholder="Emoji icon (e.g. 🍫)">
+      </div>
+      <button class="owner-add-btn" onclick="addNewItem()">➕ Add to Menu</button>
+    </div>
+
+    <!-- EXISTING ITEMS -->
+    <div class="owner-section-title">📋 Manage Menu Items</div>
+    <div class="owner-grid" id="ownerMenuGrid"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
